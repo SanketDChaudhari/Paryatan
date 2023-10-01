@@ -56,7 +56,7 @@ const MonumentsList = () => {
               </svg>
           </div>
           <ul className='container-box2' ref={list}>
-            <li>
+            {/* <li>
               <Link to={'/MonumentInfo'} style={{textDecoration:"none"}}>
                   <div className="mx-2 my-2 card-size2">
                     <img src="https://i0.wp.com/mumbai7.com/wp-content/uploads/2023/03/Aga-Khan-Palace.jpg"  className='image-size2 shadow' alt="..."/>
@@ -91,7 +91,7 @@ const MonumentsList = () => {
                   <h4>Aga Khan Palace</h4>
                 </div>
               </div>
-            </li>
+            </li> */}
           </ul>
           <div className='right-arrow' ref={right}>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">

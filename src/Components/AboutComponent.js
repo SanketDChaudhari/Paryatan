@@ -25,7 +25,7 @@ const AboutComponent = () => {
                     <h3 className='fw-bolder fs-5'>ABOUT US</h3>
                     <h2 className='fw-bold'>Virtually visit the Monuments of the Maharashtra</h2>
                     <p className=''>Paryatan is an AR based android application for the virtual visit of the monument. User can search for any monument and get details of the monument easily</p>
-                    <button type='button' className='btn btn-primary mb1 fw-bolder' onClick={navigateToAbout}>Explore Now</button>
+                    <button type='button' className='btn-1 btn-primary mb1 fw-bolder' onClick={navigateToAbout}>Explore Now</button>
                 </div>
 
             </div>

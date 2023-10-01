@@ -3,10 +3,10 @@ import './CarouselHome.css'
 const CarouselHome = () => {
   return (
     <div>
-
+{/* font-family: 'Gabarito', cursive; */}
     <div className='carousel-content text-center z-1'>
-        <h1 style={{color: "White", fontWeight: "bold", fontFamily: "TimesNewRoman"}}>Explore World's Monuments While at Home</h1>
-        <h4 style={{color: "#A9A9A9"}}>Paryantan provides an immersive viewing experience</h4>
+        <h1>Explore World While at Home</h1>
+        <h4 style={{color: "white"}}>Paryantan provides an immersive viewing experience</h4>
     </div>
 
     <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">

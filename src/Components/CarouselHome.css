@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@600&display=swap');
+
+.carousel-style{
+    margin-top: -56px;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.carousel-item{
+    object-fit: scale-down;
+}
+
+.carousel-content{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:rgba(0, 0, 0, 0.255);
+    
+    /* text-shadow: #282c34 1px 2px; */
+}
+.carousel-content h1{
+    font-family: 'Gabarito', cursive;
+    font-size: 65px;
+    color: white;
+}

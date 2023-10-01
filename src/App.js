@@ -1,16 +1,15 @@
 import './App.css';
-import { useState } from "react";
-import Header from "./MyComponents/Header";
-import Footer from "./MyComponents/Footer";
-import CarouselHome from "./MyComponents/CarouselHome";
-import WhatsHot from './MyComponents/WhatsHot';
-import About from './MyComponents/About';
-import MonumentInfo from './MyComponents/MonumentInfo';
-import AboutComponent from './MyComponents/AboutComponent';
-import AllMonuments from './MyComponents/AllMonuments';
-import india from './Images/india_blue.jpg';
-import MonumentsPath from './MyComponents/MonumentsPath';
-import Try from './MyComponents/Try';
+import { useEffect, useState } from "react";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import CarouselHome from "./Components/CarouselHome";
+import WhatsHot from './Components/Gallery';
+import About from './Components/About';
+import MonumentInfo from './Components/MonumentInfo';
+import AboutComponent from './Components/AboutComponent';
+import AllMonuments from './Components/AllMonuments';
+import MonumentsPath from './Components/AboutSection';
+import Try from './Components/Try';
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,6 +18,8 @@ import {
   Routes,
   useParams
 } from 'react-router-dom';
+import fetchFromApi from "./utils/api";
+import Home from './Components/Home/Home';
 
 
 function App() {
@@ -31,12 +32,12 @@ function App() {
         <Header/>
 
         <Routes>
-          <Route exact path="/" element={<><CarouselHome/><WhatsHot title="What's Hot"/><AboutComponent/><WhatsHot title="Trending Monuments"/><MonumentsPath/></>}></Route>
+          <Route exact path="/" element={<Home/>}></Route>
           <Route exact path="/about" element={<About />}></Route>
           <Route path="/MonumentInfo" element={<MonumentInfo/>}></Route>
-          <Route path="/AllMonuments" element={<><img src={india} style={{height:"70vh", width:"100%",objectFit:'cover', marginTop:"-56px"}}/><AllMonuments/><AllMonuments/><AllMonuments/></>}></Route>
+          <Route path="/AllMonuments" element={<><AllMonuments/></>}></Route>
         </Routes>
-        
+        <MonumentsPath/>
         <Footer/>
 
       </Router>
@@ -44,5 +45,5 @@ function App() {
     </div>
   );
 }
-
+//<WhatsHot title="Trending Monuments"/>
 export default App;

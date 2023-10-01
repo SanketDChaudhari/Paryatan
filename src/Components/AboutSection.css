@@ -17,3 +17,21 @@
     padding-top: 10vh;
     padding-left: 30vh;
 }
+
+.btn-2{
+    background-color: white;
+    width: 150px;
+    color: #e07b00;
+    border-radius: 30px;
+    padding: 15px;
+    margin: 10px;
+    border:3px solid transparent;
+}
+
+.btn-2:hover{
+    background:transparent;
+    color: white;
+    border:3px solid white;
+
+
+}
