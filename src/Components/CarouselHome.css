@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@600&family=Orbitron&family=Rajdhani&display=swap');
 .carousel-style{
     margin-top: -56px;
     height: 100vh;
@@ -25,6 +24,13 @@
 }
 .carousel-content h1{
     font-family: 'Gabarito', cursive;
-    font-size: 65px;
+    font-size: 70px;
+    color: white;
+}
+.carousel-content h4{
+    font-family: 'Rajdhani', sans-serif;
+    /* font-family: 'Orbitron', sans-serif; */
+    font-weight: 500;
+    font-size: 25px;
     color: white;
 }

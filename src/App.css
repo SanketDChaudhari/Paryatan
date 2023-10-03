@@ -64,6 +64,7 @@ body::-webkit-scrollbar {
   /* ff8c00c9 */
 }
 
+
 .content{
   backdrop-filter: blur(8px);
   /* background-color: hsl(33, 100%, 50%); */

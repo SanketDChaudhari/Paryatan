@@ -61,7 +61,7 @@
     border-radius: 30px;
     padding: 15px;
     margin: 10px;
-    border:none;
+    border:3px solid transparent;
   }
   
   .art-size{
@@ -78,6 +78,8 @@
   }
   
   .btn-1:hover {
-    box-shadow: inset 0 0 0 20rem #d77702;
-    border-color: #d77702;
+    background:transparent;
+    color: #ff8c00;
+    border:3px solid #ff8c00;
+    
   }

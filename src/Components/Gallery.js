@@ -21,18 +21,11 @@ const Gallery = (props) => {
     const list = useRef(null);
     const right = useRef(null);
     const left = useRef(null);
-    const [Data,setData]=useState([]);
 
     useEffect(() => {
         const element = list.current;
         const rightarrow = right.current;
         const leftarrow = left.current;
-        const fetchFromApi = async() => {
-            const {data} = await axios.get(`${BASE_URL}/monument`);
-            setData(data);
-            console.log(data);
-        }
-        fetchFromApi();
 
         const manageIcons = () => {
             if(element.scrollLeft >= 10){
@@ -89,8 +82,9 @@ const Gallery = (props) => {
 
             <ul className='container-box1' ref={list}>
 
-                {Data.map((ele,index)=>{    
-                if(index<5){
+                {
+                props.Data.map((ele,index)=>{    
+                if(props.title==="What's Hot" && index<5){
                     return(
                         <li>
                             <Link to={'/MonumentInfo'} style={{textDecoration:"none"}}>
@@ -103,7 +97,99 @@ const Gallery = (props) => {
                             </Link>
                         </li>
                     )
-                }return null;
+                }else if(props.title==="Agra" && ele.city=="Agra"){
+                    return(
+                        <li>
+                            <Link to={'/MonumentInfo'} style={{textDecoration:"none"}}>
+                                <div className="mx-2 my-2 card-size1">
+                                    <img src={ele.monumentImage}  className='image-size1 shadow' alt="..."/>
+                                    <div className="shadow card-text1">
+                                        <h4>{ele.monumentName}</h4>
+                                    </div>
+                                </div>
+                            </Link>
+                        </li>
+                    )
+                }else if(props.title==="Mumbai" && ele.city=="Mumbai"){
+                    return(
+                        <li>
+                            <Link to={'/MonumentInfo'} style={{textDecoration:"none"}}>
+                                <div className="mx-2 my-2 card-size1">
+                                    <img src={ele.monumentImage}  className='image-size1 shadow' alt="..."/>
+                                    <div className="shadow card-text1">
+                                        <h4>{ele.monumentName}</h4>
+                                    </div>
+                                </div>
+                            </Link>
+                        </li>
+                    )
+                }else if(props.title==="Aurangabad" && ele.city=="Aurangabad"){
+                    return(
+                        <li>
+                            <Link to={'/MonumentInfo'} style={{textDecoration:"none"}}>
+                                <div className="mx-2 my-2 card-size1">
+                                    <img src={ele.monumentImage}  className='image-size1 shadow' alt="..."/>
+                                    <div className="shadow card-text1">
+                                        <h4>{ele.monumentName}</h4>
+                                    </div>
+                                </div>
+                            </Link>
+                        </li>
+                    )
+                }else if(props.title==="Delhi" && ele.city=="Delhi"){
+                    return(
+                        <li>
+                            <Link to={'/MonumentInfo'} style={{textDecoration:"none"}}>
+                                <div className="mx-2 my-2 card-size1">
+                                    <img src={ele.monumentImage}  className='image-size1 shadow' alt="..."/>
+                                    <div className="shadow card-text1">
+                                        <h4>{ele.monumentName}</h4>
+                                    </div>
+                                </div>
+                            </Link>
+                        </li>
+                    )
+                }else if(props.title==="Pune" && ele.city=="Pune"){
+                    return(
+                        <li>
+                            <Link to={'/MonumentInfo'} style={{textDecoration:"none"}}>
+                                <div className="mx-2 my-2 card-size1">
+                                    <img src={ele.monumentImage}  className='image-size1 shadow' alt="..."/>
+                                    <div className="shadow card-text1">
+                                        <h4>{ele.monumentName}</h4>
+                                    </div>
+                                </div>
+                            </Link>
+                        </li>
+                    )
+                }else if(props.title==="Other" && ele.city!=="Pune" && ele.city!=="Agra" && ele.city!=="Delhi" && ele.city!=="Aurangabad" && ele.city!=="Mumbai"){
+                    return(
+                        <li>
+                            <Link to={'/MonumentInfo'} style={{textDecoration:"none"}}>
+                                <div className="mx-2 my-2 card-size1">
+                                    <img src={ele.monumentImage}  className='image-size1 shadow' alt="..."/>
+                                    <div className="shadow card-text1">
+                                        <h4>{ele.monumentName}</h4>
+                                    </div>
+                                </div>
+                            </Link>
+                        </li>
+                    )
+                }else if(props.title==="All"){
+                    return(
+                        <li>
+                            <Link to={'/MonumentInfo'} style={{textDecoration:"none"}}>
+                                <div className="mx-2 my-2 card-size1">
+                                    <img src={ele.monumentImage}  className='image-size1 shadow' alt="..."/>
+                                    <div className="shadow card-text1">
+                                        <h4>{ele.monumentName}</h4>
+                                    </div>
+                                </div>
+                            </Link>
+                        </li>
+                    )
+                }
+                return null;
                 })}
                 
                 {/* <li>

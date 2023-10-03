@@ -6,9 +6,9 @@ const AboutComponent = () => {
 
     const navigate = useNavigate();
 
-    const navigateToAbout = () => {
+    const navigateToExplore = () => {
         // 👇️ navigate to /About
-        navigate('/About');
+        navigate('/AllMonuments');
     };
     return (
     <div >
@@ -23,9 +23,9 @@ const AboutComponent = () => {
                 </div>
                 <div className='right-text font-monospace'>
                     <h3 className='fw-bolder fs-5'>ABOUT US</h3>
-                    <h2 className='fw-bold'>Virtually visit the Monuments of the Maharashtra</h2>
-                    <p className=''>Paryatan is an AR based android application for the virtual visit of the monument. User can search for any monument and get details of the monument easily</p>
-                    <button type='button' className='btn-1 btn-primary mb1 fw-bolder' onClick={navigateToAbout}>Explore Now</button>
+                    <h2 className='fw-bold'>Virtually visit the Monuments of<br/> India</h2>
+                    <p className=''>Paryatan is an AR based web application for the virtual visit of the monuments. User can search for any monument and get details of the monument easily.</p>
+                    <button type='button' className='btn-1 btn-primary mb1 fw-bolder' onClick={navigateToExplore}>Explore More</button>
                 </div>
 
             </div>
