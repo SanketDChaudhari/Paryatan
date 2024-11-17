@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 import CarouselHome from '../CarouselHome';
 import Gallery from '../Gallery';
 import AboutComponent from '../AboutComponent';
